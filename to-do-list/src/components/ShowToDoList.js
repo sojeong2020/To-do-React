@@ -1,13 +1,22 @@
 import React from 'react';
+import DeleteTask from './DeleteTask';
 
 const ShowToDoList = ({task}) => {
+    console.log(task)
     return (
         <div>
             <h2>Pending Task</h2>
-            <ul>
-                <li>task 1</li>
-                <li>task 2</li>
-                <li>task 3</li>   
+            <ul>{task.map((eachTask)=>{
+                return (
+                    <li key={eachTask.task}> 
+                    <h2>{eachTask.task}</h2>
+                    <p>{eachTask.done? '✅':'❌'}</p>
+                    <DeleteTask task={eachTask.task}/>
+                    </li>
+                    
+                );
+            })}
+               
             </ul>         
         </div>
     );
