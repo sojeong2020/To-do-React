@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShowToDoList = () => {
+const ShowToDoList = ({task}) => {
     return (
         <div>
             <h2>Pending Task</h2>
