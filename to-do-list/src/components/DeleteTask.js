@@ -1,23 +1,27 @@
 import React from 'react';
-import { useState } from 'react';
 
 
-const DeleteTask = ({task}) => {
-
-
- 
-
+const DeleteTask = ({ task, wholeList, setTask }) => {
+    const deleteTask = () => {
+      const copyList = [...wholeList];
+      console.log(copyList, "firstlist");
+      copyList.splice(
+        copyList.findIndex((item) => item.task === "task"),
+        1
+      );
+  
+      // console.log(copyList.length);
+  
+      setTask(copyList);
+    };
+  
     return (
-        <div>
-            <button onClick={()=>clearTask((currtask)=>{
-                const deletingTask = [currtask];
-                deletingTask.splice(0,1)
-                return task.deletingTask
-            })}>delete
-            </button>
-            
-        </div>
+      <div>
+        <button className="bin" onClick={() => deleteTask()}>
+          🗑️
+        </button>
+      </div>
     );
-};
+  };
 
 export default DeleteTask;

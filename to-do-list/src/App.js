@@ -9,16 +9,15 @@ import { useState } from 'react';
 
 function App() {
 
-  //setStatus
   const [task, setTask] = useState(
-    [{task:"cleaning", done: true}, 
-    {task:"cooking", done: false}]);
+    [{task:"cleaning"}, 
+    {task:"cooking"}]);
 
   return (
     <div className="App">
       <Header />
       <AddNewToDo setTask={setTask}/>
-      <ShowToDoList task={task} />
+      <ShowToDoList task={task} setTask={setTask}/>
     </div>
   );
 }

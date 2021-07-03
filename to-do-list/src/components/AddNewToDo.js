@@ -9,13 +9,15 @@ const AddNewToDo = ({setTask}) => {
         <div>
             <form
             onSubmit={(event)=>{
+                const regex = /^([^\s]*[A-Za-z0-9]\s*)[^\s]*$/;
                 event.preventDefault();
+                if (newTask.length > 0 && regex.test(newTask)) {
                 setTask((currTask)=>{
                   const newTasks = [...currTask];
                   newTasks.push({task: newTask});
                    return newTasks;
-
                 })
+            }
             }}
             >
             <label htmlFor="newTask">Add new task:</label>
