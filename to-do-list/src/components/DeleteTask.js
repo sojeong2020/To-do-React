@@ -3,18 +3,17 @@ import { useState } from 'react';
 
 
 const DeleteTask = ({task}) => {
-    const [deleteTask,setDeleteTask]=useState(task)
+
+
+ 
 
     return (
         <div>
-            <button onClick={()=>setDeleteTask((currTask)=>{
-              const deletingTask = [currTask];
-              console.log(deletingTask)
-              deletingTask.splice(0,0)
-              return deletingTask;
-
-            })} >
-                DELETE
+            <button onClick={()=>clearTask((currtask)=>{
+                const deletingTask = [currtask];
+                deletingTask.splice(0,1)
+                return task.deletingTask
+            })}>delete
             </button>
             
         </div>

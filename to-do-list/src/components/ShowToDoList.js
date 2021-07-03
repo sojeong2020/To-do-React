@@ -10,7 +10,6 @@ const ShowToDoList = ({task}) => {
                 return (
                     <li key={eachTask.task}> 
                     <h2>{eachTask.task}</h2>
-                    <p>{eachTask.done? '✅':'❌'}</p>
                     <DeleteTask task={eachTask.task}/>
                     </li>
                     

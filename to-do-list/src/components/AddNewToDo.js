@@ -12,7 +12,7 @@ const AddNewToDo = ({setTask}) => {
                 event.preventDefault();
                 setTask((currTask)=>{
                   const newTasks = [...currTask];
-                  newTasks.push({task: newTask, done: false});
+                  newTasks.push({task: newTask});
                    return newTasks;
 
                 })
