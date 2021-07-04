@@ -1,13 +1,33 @@
 .App {
   text-align: center;
-  font-family: 'Roboto', sans-serif; 
-  background-color: #FFEDA3 ;
+  font-family: 'Otomanopee One', sans-serif;
+  background-color: #a3f4ff ;
+  color:rgb(13, 3, 121);
+}
+.add {
+  margin: 50px;
+}
+.show {
+  margin: 50px;
+}
+h2 {
+  font-size: 1.5rem;
+} 
+p {
+  font-size: 1.5rem;
 }
 
 label {
+  font-size: 1.5rem;
   margin: 16px;
 }
-
+button {
+  margin-left: 10px;
+  border-radius: 8px;
+}
+input {
+  border-radius: 8px;
+}
 .bin {
   margin: 8px 16px;
   font-size: 25px;

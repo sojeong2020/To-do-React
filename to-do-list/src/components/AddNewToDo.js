@@ -6,7 +6,7 @@ const AddNewToDo = ({setTask}) => {
     const [newTask, setNewTask] = useState('')
 
     return (
-        <div>
+        <div className="add">
             <form
             onSubmit={(event)=>{
                 const regex = /^([^\s]*[A-Za-z0-9]\s*)[^\s]*$/;

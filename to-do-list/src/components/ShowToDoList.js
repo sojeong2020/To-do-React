@@ -3,12 +3,12 @@ import DeleteTask from './DeleteTask';
 
 const ShowToDoList = ({task, setTask}) => {
     return (
-        <div>
+        <div className="show">
             <h2>Pending Task : {task.length}</h2>
             <ul>{task.map((eachTask)=>{
                 return (
                     <li key={eachTask.task}> 
-                    <h2>{eachTask.task}</h2>
+                    <p>{eachTask.task}</p>
                     <DeleteTask task={eachTask.task}
                     wholeList={task}
                     setTask={setTask}/>
